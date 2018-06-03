@@ -10,12 +10,4 @@ export class TestService extends BaseService {
         private readonly testDao: TestDao,
     ) { super(); }
 
-    public async createOne(data: CreateTestDto) {
-        return await this.testDao.createOne(data);
-    }
-
-    public async findAll() {
-        return await this.testDao.findAll();
-    }
-
 }

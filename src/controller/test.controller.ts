@@ -14,16 +14,4 @@ export class TestController extends BaseController {
         private readonly testService: TestService,
     ) { super(); }
 
-    @Post()
-    @UseGuards(GuardLimit)
-    @DLimit(10)
-    public async createOne(@Body(new PipeValidation()) body: CreateTestDto) {
-        return await this.testService.createOne(body);
-    }
-
-    @Get()
-    public async findAll() {
-        return await this.testService.findAll();
-    }
-
 }
